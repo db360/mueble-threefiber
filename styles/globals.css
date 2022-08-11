@@ -1,26 +1,30 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+html {
+    background-color: darkgrey;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.image-gallery {
+    width: auto;
+    height: 100vh;
+
 }
 
-* {
-  box-sizing: border-box;
+.fullscreen .image-gallery-slide img {
+    max-height:  100vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.image-gallery-thumbnails {
+    margin-top: 15px;
+    height: 10%;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    align-items: center;
+    margin-top: 20px;
+    max-height: 80vh;
 }
